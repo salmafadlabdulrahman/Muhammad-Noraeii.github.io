@@ -28,6 +28,81 @@ header p {
     font-size: 1.2rem;
 }
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 115, 255, 0.7);
+}
+
+/* Style for dropdown menu */
+nav .dropdown {
+    position: relative;
+}
+
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    list-style-type: none;
+    padding: 10px 0;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 1.5s ease-in-out; /* Smooth transition for hiding */
+}
+
+nav .dropdown-menu li {
+    padding: 8px 12px;
+    text-align: left;
+}
+
+nav .dropdown-menu li a {
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 5px 0;
+}
+
+nav .dropdown-menu li a:hover {
+    background-color: rgba(0, 115, 255, 0.7);
+}
+
+/* Style for hiding dropdown menu when mouse leaves */
+nav .dropdown-menu.hidden {
+    opacity: 0; /* When hidden, fade out */
+}
+
+/* Style for showing dropdown menu when mouse enters */
+nav .dropdown-menu.show {
+    opacity: 1; /* When shown, fade in */
+}
+
 .container {
     max-width: 1200px;
     margin: auto;
