@@ -10,10 +10,10 @@ body {
 }
 
 header {
-    background: rgba(55, 255, 0);
+    background: rgba(0, 115, 255, 0.169);
     color: #fff;
     padding: 40px 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(3, 244, 63, 0.053);
     animation: fadeIn 2s;
 }
 
