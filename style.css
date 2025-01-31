@@ -2,7 +2,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('background.webp') no-repeat center center fixed;
+    background: url('assets/Mount-H.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
     text-align: center;
@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background: rgba(98, 0, 234, 0.9);
+    background: rgba(55, 255, 0);
     color: #fff;
     padding: 40px 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -158,22 +158,63 @@ header p {
     transform: scale(1.1);
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
 footer {
-    background: #333;
+    background-color: #222;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-    font-size: 0.9rem;
+    padding: 10px 0; 
+    position: relative; 
+    width: 100%;
+    font-size: 0.9rem; 
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2); 
+    letter-spacing: 0.5px; 
 }
 
 footer a {
-    color: #6200ea;
+    color: #ff4081; 
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; 
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #6200ea; 
+    transform: scale(1.05); 
+}
+
+footer p {
+    margin: 0; 
+    font-size: 0.85rem; 
 }
 
 @keyframes fadeIn {
@@ -218,7 +259,6 @@ footer a:hover {
     color: #ff0000;
 }
 
-/* استایل گواهی‌ها */
 .certificates {
     margin-top: 50px;
     text-align: center;
@@ -249,7 +289,6 @@ footer a:hover {
     color: #6200ea;
 }
 
-/* استایل Modal */
 .modal {
     display: none; 
     position: fixed;
@@ -293,15 +332,14 @@ footer a:hover {
     cursor: pointer;
 }
 
-/* استایل کلی برای بخش درباره من */
 .about-section {
     padding: 100px 20px;
     text-align: center;
-    background: url('assets/Mount-MN.jpg') no-repeat center center fixed;
+    background: url('assets/Mount-S.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     color: #fff;
-    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.6); /* لایه تاری در پس‌زمینه */
+    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.6); 
 }
 
 .about-section::before {
@@ -311,7 +349,7 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* شفافیت بیشتر برای پس‌زمینه */
+    background: rgba(0, 0, 0, 0.5); 
     z-index: 0;
 }
 
@@ -321,9 +359,8 @@ footer a:hover {
     padding: 40px 20px;
     max-width: 1000px;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.4); /* پس‌زمینه تیره برای بهتر دیده شدن متن */
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* سایه بیشتر برای برجسته کردن */
+    background: rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
     animation: fadeInUp 1.5s ease-out;
 }
 
@@ -353,55 +390,51 @@ footer a:hover {
     animation: fadeInUp 2.5s ease-out;
 }
 
-/* استایل برای آیکون‌های شبکه‌های اجتماعی */
 .social-icon {
     font-size: 3rem;
-    color: #fff; /* پیش‌فرض رنگ سفید */
+    color: #fff;
     transition: color 0.3s, transform 0.3s ease-in-out;
     display: inline-block;
 }
 
-/* تغییر رنگ آیکون‌ها هنگام هاور */
 
 .social-icon:hover {
-    transform: scale(1.2); /* بزرگ شدن آیکون هنگام هاور */
+    transform: scale(1.2); 
 }
 
-/* رنگ آیکون‌های شبکه‌های اجتماعی */
 
 .social-icon.github {
-    color: #fff; /* رنگ آیکون GitHub */
+    color: #fff; 
 }
 
 .social-icon.github:hover {
-    color:  #333; /* رنگ سفید هنگام هاور */
+    color:  #333; 
 }
 
 .social-icon.linkedin {
-    color: #ffffff; /* رنگ آیکون LinkedIn */
+    color: #ffffff; 
 }
 
 .social-icon.linkedin:hover {
-    color:#0077b5; /* رنگ سفید هنگام هاور */
+    color:#0077b5; 
 }
 
 .social-icon.twitter {
-    color: #ffffff; /* رنگ آیکون Twitter */
+    color: #ffffff; 
 }
 
 .social-icon.twitter:hover {
-    color: #1da1f2;; /* رنگ سفید هنگام هاور */
+    color: #1da1f2;; 
 }
 
 .social-icon.instagram {
-    color: #ffffff; /* رنگ آیکون Instagram */
+    color: #ffffff; 
 }
 
 .social-icon.instagram:hover {
-    color: #e1306c; /* رنگ سفید هنگام هاور */
+    color: #e1306c; 
 }
 
-/* انیمیشن برای ورود */
 @keyframes fadeInUp {
     from {
         opacity: 0;
