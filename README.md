@@ -8,3 +8,9 @@ It has this Features
  * Skills Part!
  * About us Part!
  * Link to Social Media!
+
+---
+
+Screen Shots
+![alt text](Aboutme.png)
+![About Me](Main.png)
