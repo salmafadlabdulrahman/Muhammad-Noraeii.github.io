@@ -8,9 +8,13 @@ It has this Features
  * Skills Part!
  * About us Part!
  * Link to Social Media!
+ More than 800 Lines of Code!
+ 
+Free to use!
 
 ---
 
 Screen Shots
-![alt text](Aboutme.png)
 ![About Me](Main.png)
+![alt text](Aboutme.png)
+

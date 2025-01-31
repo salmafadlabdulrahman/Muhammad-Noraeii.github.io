@@ -40,11 +40,11 @@
                 <li class="dropdown">
                     <a href="#skills">Skills</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#skill1">JavaScript</a></li>
-                        <li><a href="#skill2">Python</a></li>
-                        <li><a href="#skill3">CSS</a></li>
-                        <li><a href="#skill4">HTML</a></li>
-                        <li><a href="https://en.Wikipedia.org/C#">C#</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/CSS">CSS</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">C#</a></li>
                     </ul>
                 </li>
             </ul>
@@ -150,21 +150,25 @@
     </footer>
     <script>
 
-    document.querySelectorAll('.dropdown').forEach(function(dropdown) {
-     const menu = dropdown.querySelector('.dropdown-menu');
-     let timeout;
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdown = document.querySelectorAll('.dropdown');
+        dropdown.forEach(item => {
+            let timeout;
 
-        dropdown.addEventListener('mouseover', function() {
-         clearTimeout(timeout);
-         menu.classList.remove('hidden');
-         menu.classList.add('show');
-        });
+            item.addEventListener('mouseenter', () => {
+                
+                clearTimeout(timeout);
+                const dropdownMenu = item.querySelector('.dropdown-menu');
+                dropdownMenu.style.display = 'block'; 
+            });
 
-        dropdown.addEventListener('mouseout', function() {
-             timeout = setTimeout(function() {
-             menu.classList.remove('show');
-             menu.classList.add('hidden');
-             }, 1500); 
+            item.addEventListener('mouseleave', () => {
+                const dropdownMenu = item.querySelector('.dropdown-menu');
+                
+                timeout = setTimeout(() => {
+                    dropdownMenu.style.display = 'none';
+                }, 500); 
+            });
         });
     });
 
