@@ -3,29 +3,39 @@
 /*E-Mail : Muhammad.Noraeii@gmail.com*/
 /*GitHub : https://github.com/Muhammad-Noraeii*/
 /*Enjoy a Perfect Style!*/
+:root {
+    --primary-color: #0073ff;
+    --secondary-color: rgba(0, 115, 255, 0.7);
+    --background-color: rgba(0, 0, 0, 0.4);
+    --font-color: #fff;
+    --text-color: #333;
+    --hover-background: rgba(0, 115, 255, 0.7);
+    --nav-padding: 15px;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: url('assets/Mount-H.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #333;
+    color: var(--text-color);
     text-align: center;
     overflow-x: hidden;
 }
 
 header {
     background: rgba(0, 115, 255, 0.169);
-    color: #fff;
+    color: var(--font-color);
     padding: 40px 10px;
     box-shadow: 0 4px 6px rgba(3, 244, 63, 0.053);
-    animation: fadeIn 2s;
+    animation: fadeIn 2s ease-in-out;
 }
 
 header h1 {
     font-size: 2.5rem;
     margin: 0;
-    animation: bounceIn 1.5s;
+    animation: bounceIn 1.5s ease-in-out;
 }
 
 header p {
@@ -34,7 +44,7 @@ header p {
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
     text-align: center;
@@ -43,36 +53,32 @@ nav ul {
 nav ul li {
     display: inline-block;
     position: relative;
-    margin: 0 15px; 
+    margin: 0 var(--nav-padding);
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
-    font-size: 1rem; 
-    padding: 8px 12px; 
+    color: var(--font-color);
+    font-size: 1rem;
+    padding: 8px 12px;
     display: block;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: rgba(0, 115, 255, 0.7);
+    background-color: var(--secondary-color);
 }
 
 nav .dropdown {
     position: relative;
 }
 
-nav .dropdown:hover .dropdown-menu {
-    display: block;
-}
-
 nav .dropdown-menu {
     display: none;
     position: absolute;
-    background: rgba(0, 0, 0, 0.4); 
-    backdrop-filter: blur(5px); 
-    list-style-type: none;
+    background: var(--background-color);
+    backdrop-filter: blur(5px);
+    list-style: none;
     padding: 10px 0;
     width: 200px;
     border-radius: 8px;
@@ -86,22 +92,19 @@ nav .dropdown-menu li {
 }
 
 nav .dropdown-menu li a {
-    color: #fff;
-    font-size: 0.9rem; 
+    color: var(--font-color);
+    font-size: 0.9rem;
     padding: 5px 0;
 }
 
 nav .dropdown-menu li a:hover {
-    background-color: rgba(0, 115, 255, 0.7);
-}
-
-nav .dropdown-menu {
-    display: none;
+    background-color: var(--hover-background);
 }
 
 nav .dropdown:hover .dropdown-menu {
     display: block;
 }
+
 
 
 .container {
@@ -823,7 +826,7 @@ footer p {
 
 .article-header {
     background: rgba(0, 30, 255, 0.142);
-    color: #fff;
+    color: #ff0000;
     padding: 50px 20px;
     box-shadow: 0 4px 6px rgba(3, 244, 63, 0.1);
     animation: fadeInUp 1.5s ease-out;
@@ -831,7 +834,7 @@ footer p {
 
 .article-header .article-title {
     font-size: 3rem;
-    color: #fff;
+    color: #ff0000;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
@@ -874,57 +877,31 @@ footer p {
 
 .article-content p {
     font-size: 1.1rem;
-    line-height: 1.8;
+    line-height: 1.5;
     color: #555;
     margin-bottom: 20px;
     text-align: justify;
+    font-weight: normal;  /* حذف بولد */
+    font-family: 'Times New Roman', Times, serif;  /* استفاده از فونت تایمز نیو رومن */
 }
+
+
 
 .article-content p:last-child {
     margin-bottom: 0;
 }
 
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    font-size: 1rem;
-    margin-top: 40px;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
+.article-header .article-date {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-top: 10px;
 }
 
-footer a {
-    color: #ff4081;
-    text-decoration: none;
-    font-weight: bold;
+.article-header .article-author {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-top: 5px;
 }
 
-footer a:hover {
-    color: #6200ea;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .article-header {
-        padding: 40px 10px;
-    }
-
-    .article-title {
-        font-size: 2.2rem;
-    }
-
-    .article-body {
-        padding: 20px 10px;
-    }
-
-    .article-image {
-        height: 300px;
-    }
-
-    .article-content p {
-        font-size: 1rem;
-    }
-}
 
 /*End of the code!*/
