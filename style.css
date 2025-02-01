@@ -900,25 +900,48 @@ footer p {
 /* All Part of Style Wrote by Muhammad Noraeii */
 /* Enjoy a Perfect Style! */
 
+:root {
+    --primary-bg-color: rgba(0, 30, 255, 0.142);
+    --primary-color: #ff0000;
+    --secondary-color: #ccc;
+    --hover-scale: 1.05;
+    --box-shadow-light: 0 4px 6px rgba(3, 244, 63, 0.1);
+    --box-shadow-image: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --box-shadow-content: 0 8px 15px rgba(0, 0, 0, 0.1);
+    --font-size-large: 3rem;
+    --font-size-medium: 1.2rem;
+    --font-size-small: 1.1rem;
+    --font-size-xsmall: 0.9rem;
+    --font-size-xxlarge: 4rem;
+    --border-radius: 15px;
+    --font-family: 'Times New Roman', Times, serif;
+    --font-family-alt: 'Arial', sans-serif;
+    --primary-btn-bg: #6200ea;
+    --secondary-btn-bg: #3700b3;
+    --btn-hover-scale: 1.1;
+    --btn-padding: 10px 20px;
+}
+
 .article-header {
-    background: rgba(0, 30, 255, 0.142);
-    color: #ff0000;
+    background: var(--primary-bg-color);
+    color: var(--primary-color);
     padding: 50px 20px;
-    box-shadow: 0 4px 6px rgba(3, 244, 63, 0.1);
+    box-shadow: var(--box-shadow-light);
     animation: fadeInUp 1.5s ease-out;
 }
 
 .article-header .article-title {
-    font-size: 3rem;
-    color: #ff0000;
+    font-size: var(--font-size-large);
+    color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
 }
 
-.article-header .article-date {
-    font-size: 1.2rem;
-    color: #ccc;
+.article-header .article-date, 
+.article-header .article-author {
+    font-size: var(--font-size-small);
+    color: var(--secondary-color);
     margin-top: 10px;
 }
 
@@ -926,8 +949,8 @@ footer p {
     background-color: #fff;
     padding: 40px 20px;
     margin-top: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-content);
     animation: fadeInUp 1.5s ease-in-out;
 }
 
@@ -935,9 +958,9 @@ footer p {
     width: 100%;
     height: 400px;
     margin-bottom: 30px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-image);
 }
 
 .article-image img {
@@ -948,36 +971,83 @@ footer p {
 }
 
 .article-image img:hover {
-    transform: scale(1.05);
+    transform: scale(var(--hover-scale));
 }
 
 .article-content p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-medium);
     line-height: 1.5;
     color: #555;
     margin-bottom: 20px;
     text-align: justify;
-    font-weight: normal;  /* حذف بولد */
-    font-family: 'Times New Roman', Times, serif;  /* استفاده از فونت تایمز نیو رومن */
+    font-weight: normal;
+    font-family: var(--font-family);
 }
-
-
 
 .article-content p:last-child {
     margin-bottom: 0;
 }
 
-.article-header .article-date {
-    font-size: 1.1rem;
-    color: #ccc;
-    margin-top: 10px;
+.article-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.article-header .article-author {
-    font-size: 1.1rem;
-    color: #ccc;
-    margin-top: 5px;
+.article-content a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
 }
 
+.article-footer {
+    background-color: var(--primary-bg-color);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.article-footer p {
+    font-size: var(--font-size-small);
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: var(--font-family-alt);
+}
+
+.article-footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.article-footer .social-icons a {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.article-footer .social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.article-btn {
+    display: inline-block;
+    background-color: var(--primary-btn-bg);
+    color: #fff;
+    padding: var(--btn-padding);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: var(--font-size-small);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.article-btn:hover {
+    transform: scale(var(--btn-hover-scale));
+    background-color: var(--secondary-btn-bg);
+}
+
+.article-btn:active {
+    transform: scale(1);
+}
 
 /*End of the code!*/
