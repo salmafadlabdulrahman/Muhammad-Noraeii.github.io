@@ -629,13 +629,25 @@ footer p {
     }
 }
 
+:root {
+    --primary-bg-color: #f39c12;
+    --secondary-bg-color: rgba(0, 0, 0, 0.5);
+    --content-bg-color: rgba(88, 85, 85, 0.4);
+    --box-shadow-light: 0 8px 20px rgba(0, 0, 0, 0.6);
+    --box-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.8);
+    --text-color-light: #fff;
+    --transition-duration: 0.3s;
+    --heading-font-size: 3.5rem;
+    --intro-font-size: 1.2rem;
+}
+
 .about-section {
     padding: 100px 20px;
     text-align: center;
     background: url('assets/Mount-S.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
-    color: #fff;
+    color: var(--text-color-light);
     box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.6);
     animation: fadeInUp 1.5s ease-out, rotateBg 15s linear infinite;
 }
@@ -647,7 +659,7 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--secondary-bg-color);
     z-index: 0;
     animation: fadeInUp 2s ease-out;
 }
@@ -658,46 +670,47 @@ footer p {
     padding: 40px 20px;
     max-width: 1000px;
     margin: 0 auto;
-    background: rgba(88, 85, 85, 0.4);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    background: var(--content-bg-color);
+    box-shadow: var(--box-shadow-light);
     animation: scaleUp 1.5s ease-out;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
 }
 
 .about-content:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .about-section h2 {
-    font-size: 3.5rem;
+    font-size: var(--heading-font-size);
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #fff;
+    color: var(--text-color-light);
     animation: slideInLeft 1s ease-out;
-    transition: color 0.3s ease;
+    transition: color var(--transition-duration);
 }
 
 .about-section h2:hover {
-    color: #f39c12; 
+    color: var(--primary-bg-color);
     transform: scale(1.05);
 }
 
 .about-section .intro {
-    font-size: 1.2rem;
+    font-size: var(--intro-font-size);
     line-height: 1.8;
-    color: #fff;
+    color: var(--text-color-light);
     max-width: 900px;
     margin: 0 auto;
     animation: fadeInUp 2s ease-out;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color var(--transition-duration), transform var(--transition-duration);
 }
 
 .about-section .intro:hover {
-    color: #f39c12; 
+    color: var(--primary-bg-color);
     transform: translateY(-5px);
 }
+
 
 .social-links {
     margin-top: 30px;
