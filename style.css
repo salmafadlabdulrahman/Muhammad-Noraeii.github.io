@@ -788,18 +788,33 @@ footer p {
     }
 }
 
+:root {
+    --primary-color: #6200ea;
+    --secondary-color: #3700b3;
+    --hover-scale: 1.05;
+    --box-shadow-light: 0 8px 20px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.2);
+    --font-color-dark: #555;
+    --font-color-light: #fff;
+    --font-size-medium: 1.5rem;
+    --font-size-small: 1rem;
+    --border-radius: 10px;
+    --button-radius: 25px;
+    --padding: 10px 20px;
+}
+
 .blog {
     background: #f8f8f8;
     padding: 60px 20px;
     margin: 40px 0;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-light);
 }
 
 .blog h2 {
     font-size: 2.5rem;
     text-align: center;
-    color: #6200ea;
+    color: var(--primary-color);
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -814,8 +829,8 @@ footer p {
 
 .blog-post {
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
     width: 300px;
     overflow: hidden;
     text-align: left;
@@ -824,19 +839,19 @@ footer p {
 
 .blog-post:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .blog-post img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-bottom: 5px solid #6200ea;
+    border-bottom: 5px solid var(--primary-color);
     transition: transform 0.3s ease;
 }
 
 .blog-post img:hover {
-    transform: scale(1.05);
+    transform: scale(var(--hover-scale));
 }
 
 .blog-post .post-content {
@@ -844,41 +859,42 @@ footer p {
 }
 
 .blog-post .post-content h3 {
-    font-size: 1.5rem;
+    font-size: var(--font-size-medium);
     margin: 0 0 15px;
-    color: #6200ea;
+    color: var(--primary-color);
     transition: color 0.3s ease;
 }
 
 .blog-post .post-content h3 a {
     text-decoration: none;
-    color: #6200ea;
+    color: var(--primary-color);
 }
 
 .blog-post .post-content h3 a:hover {
-    color: #3700b3;
+    color: var(--secondary-color);
 }
 
 .blog-post .post-content p {
-    font-size: 1rem;
-    color: #555;
+    font-size: var(--font-size-small);
+    color: var(--font-color-dark);
     margin-bottom: 15px;
 }
 
 .blog-post .read-more {
     display: inline-block;
     text-decoration: none;
-    background: #6200ea;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 25px;
+    background: var(--primary-color);
+    color: var(--font-color-light);
+    padding: var(--padding);
+    border-radius: var(--button-radius);
     transition: background 0.3s, transform 0.3s;
 }
 
 .blog-post .read-more:hover {
-    background: #3700b3;
-    transform: scale(1.1);
+    background: var(--secondary-color);
+    transform: scale(var(--hover-scale));
 }
+
 
 /* Article Page Specific Styles */
 /* All Part of Style Wrote by Muhammad Noraeii */
