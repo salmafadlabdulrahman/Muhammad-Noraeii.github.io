@@ -8,7 +8,8 @@ It has this Features
  * Skills Part!
  * About us Part!
  * Link to Social Media!
- More than 800 Lines of Code!
+ More than 1000 Lines of Code!
+Advanced Style!
  
 Free to use!
 
