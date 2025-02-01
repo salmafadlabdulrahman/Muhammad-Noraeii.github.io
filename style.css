@@ -344,34 +344,47 @@ body {
     flex: 1;
 }
 
+:root {
+    --footer-bg-color: #222;
+    --footer-text-color: #fff;
+    --link-color: #ff4081;
+    --link-hover-color: #6200ea;
+    --font-size-small: 0.85rem;
+    --font-size-normal: 0.9rem;
+    --footer-padding: 10px 0;
+    --box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
+    --transition-duration: 0.3s;
+}
+
 footer {
-    background-color: #222;
-    color: #fff;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
     text-align: center;
-    padding: 10px 0; 
-    position: relative; 
+    padding: var(--footer-padding);
+    position: relative;
     width: 100%;
-    font-size: 0.9rem; 
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2); 
-    letter-spacing: 0.5px; 
+    font-size: var(--font-size-normal);
+    box-shadow: var(--box-shadow);
+    letter-spacing: 0.5px;
 }
 
 footer a {
-    color: #ff4081; 
+    color: var(--link-color);
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s, transform 0.3s; 
+    transition: color var(--transition-duration), transform var(--transition-duration);
 }
 
 footer a:hover {
-    color: #6200ea; 
-    transform: scale(1.05); 
+    color: var(--link-hover-color);
+    transform: scale(1.05);
 }
 
 footer p {
-    margin: 0; 
-    font-size: 0.85rem; 
+    margin: 0;
+    font-size: var(--font-size-small);
 }
+
 
 @keyframes fadeIn {
     from {
