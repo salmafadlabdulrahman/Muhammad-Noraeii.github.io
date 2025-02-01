@@ -253,18 +253,36 @@ nav .dropdown:hover .dropdown-menu {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
+:root {
+    --primary-color: #6200ea;
+    --secondary-color: #f4f4f9;
+    --highlight-color: #e8e8ff;
+    --text-color: #333;
+    --hover-scale: 1.1;
+    --button-padding: 15px 25px;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    --font-size: 1rem;
+    --border-radius: 20px;
+}
+
 .skills {
     background: #fff;
     padding: 40px 20px;
     margin: 40px 0;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .skills h2 {
-    font-size: 2rem;
-    color: #6200ea;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
 }
 
 .skills ul {
@@ -273,24 +291,28 @@ nav .dropdown:hover .dropdown-menu {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
 }
 
 .skills li {
-    background: linear-gradient(135deg, #e8e8ff, #f4f4f9);
-    padding: 15px 25px;
-    border-radius: 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    background: linear-gradient(135deg, var(--highlight-color), var(--secondary-color));
+    padding: var(--button-padding);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size);
+    font-weight: 600;
+    color: var(--text-color);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    min-width: 150px;
 }
 
 .skills li:hover {
-    transform: scale(1.1);
+    transform: scale(var(--hover-scale));
+    box-shadow: var(--hover-shadow);
 }
+
 
 html, body {
     height: 100%;
